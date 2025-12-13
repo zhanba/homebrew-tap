@@ -1,25 +1,25 @@
 class Pji < Formula
   desc "A CLI for managing, finding, and opening Git repositories."
   homepage "https://github.com/zhanba/pji"
-  version "0.1.6"
+  version "0.1.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/zhanba/pji/releases/download/v0.1.6/pji-aarch64-apple-darwin.tar.xz"
-      sha256 "8014ef4a38fb9ea69eca267284391f3fd33f7dcbd8f8e3a72dd7c563fa81d35f"
+      url "https://github.com/zhanba/pji/releases/download/v0.1.7/pji-aarch64-apple-darwin.tar.xz"
+      sha256 "f3d9dbc6c87fd9ad163154bce4d432314e0b52ed22bb9131fbae22a150f1f343"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zhanba/pji/releases/download/v0.1.6/pji-x86_64-apple-darwin.tar.xz"
-      sha256 "249a438837e721877b8ca5c93f44c90d256118ac505d7b36a2804ff94c864206"
+      url "https://github.com/zhanba/pji/releases/download/v0.1.7/pji-x86_64-apple-darwin.tar.xz"
+      sha256 "2a8419479954f51c3544410ec12766d4eff3d93bc3d9f17f04d8cde024985b2c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/zhanba/pji/releases/download/v0.1.6/pji-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c246159386069c947e978f97cd3b15247550c461ff6396dbc9fa61d7d2ddf685"
+      url "https://github.com/zhanba/pji/releases/download/v0.1.7/pji-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2ecd86f615cf042b2902d80b0b4a4d07918f1e6d64d6fb6602bbe694d58886f0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zhanba/pji/releases/download/v0.1.6/pji-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c5ac9b472f9561e3ae779a59a0ae5d5f74c73c9c4f2ca2d3efd375cbddcf20b3"
+      url "https://github.com/zhanba/pji/releases/download/v0.1.7/pji-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "57ba62c3de351a0862e3861e45ef0a81d4d8ddde5312bfced2fd725891011499"
     end
   end
   license "MIT"
