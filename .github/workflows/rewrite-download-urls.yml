@@ -1,0 +1,27 @@
+# cargo-dist republishes Formula/cli.rb with github.com asset URLs on every
+# Loka CLI release; the source repository is private, so those URLs are not
+# anonymously downloadable. Rewrite them to the public download proxy.
+name: Rewrite download URLs
+
+on:
+  push:
+    branches: [main]
+    paths: ["Formula/cli.rb"]
+
+permissions:
+  contents: write
+
+jobs:
+  rewrite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Point cli formula at dl.ryannz.com
+        run: |
+          sed -i 's|https://github.com/zhanba/loka/releases/download|https://dl.ryannz.com/download|g' Formula/cli.rb
+          if ! git diff --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit -am "chore: serve cli artifacts via dl.ryannz.com"
+            git push
+          fi
