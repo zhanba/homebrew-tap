@@ -1,19 +1,19 @@
 class Loka < Formula
   desc "Loka command-line server for the mobile app"
   homepage "https://tryloka.dev"
-  version "1.14.0"
+  version "1.14.1"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/zhanba/loka/releases/download/cli/v1.14.0/cli-aarch64-apple-darwin.tar.xz"
-    sha256 "3776ae4939c0f9a79bf22d19fa9caa59168af830c6fd29300db42fc34112b350"
+    url "https://github.com/zhanba/loka/releases/download/cli/v1.14.1/cli-aarch64-apple-darwin.tar.xz"
+    sha256 "2e30105ad1abc303ab792f40dd04caf4c93e9ca00a66a6bb93683989d9d01267"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/zhanba/loka/releases/download/cli/v1.14.0/cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6e19c380c2058ef38ae457e38fedc760b7b826d6f857f10453314fe872d5d698"
+      url "https://github.com/zhanba/loka/releases/download/cli/v1.14.1/cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a59c40acf13c9f04f62170dbbd7fee8ebcb35d47847b429b03f1f6392719cbae"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zhanba/loka/releases/download/cli/v1.14.0/cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ea9be4031466764b4215740df28c79752225d7f0c99b118927307dc258976916"
+      url "https://github.com/zhanba/loka/releases/download/cli/v1.14.1/cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f793254c7449990e44c5747f21b1f169b2d6ba2108eb74816268cbd67a181bf0"
     end
   end
   license "MIT"
